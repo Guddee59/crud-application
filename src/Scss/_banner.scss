@@ -1,0 +1,68 @@
+.textcontent{
+ 
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+}
+@mixin textcontent-mob(){
+    h3 {
+        font-size: 1.4rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+}
+.banner {
+    width: 100%;
+    position: relative;
+    .banner-text {
+        position: absolute;
+        top: 0;
+        color: #fff;
+        text-align: center;
+        margin-top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        @extend .textcontent
+    }
+    img {
+        height: 100vh;
+    }
+}
+.hero-banner{
+position: relative;
+text-align: right;
+    .banner-text{
+        position: absolute;
+        top: 0;
+        color: #fff;
+        margin-top: 10%;
+       right: 10%;
+        width: 100%;
+        @extend .textcontent
+    }
+    img {
+        height: 100vh;
+    }
+}
+@media(max-width:768px){
+    .banner {
+        .banner-text {
+            margin-top: 30%;
+            @include textcontent-mob;
+        }
+    }
+    .hero-banner {
+        .banner-text{
+            right: 0;
+            text-align: center;
+            @include textcontent-mob;
+        }
+    }
+}

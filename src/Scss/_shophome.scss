@@ -1,0 +1,36 @@
+.shop-home{
+    .heading{
+        h3{
+            color: #342c2c;
+            margin-top: 1rem;
+        }
+    }
+    .product-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+        img{
+            width: 400px;
+        }
+        h2{
+            color: #0072bc;
+            font-weight: 800;
+            font-size: 1.6rem;
+        }
+        h3{
+            color: #342c2c;
+        }
+    }
+}
+
+@media(max-width:768px){
+    .shop-home{
+        .product-details{
+            img{
+                width: 100%;
+            }
+        }
+    } 
+}

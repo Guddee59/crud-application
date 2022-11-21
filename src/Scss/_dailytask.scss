@@ -1,0 +1,66 @@
+.input-field {
+    outline: none;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+.task-form {
+    margin: 0 auto;
+    width: 70%;
+    input,
+    select,
+    textarea {
+        @extend .input-field;
+        border-radius: 0;
+        border: 0.01rem solid #ccc;
+    }
+    select {
+        background: transparent;
+    }
+}
+
+// task form
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+        border-right: 1px solid #0000007a;
+        border-bottom: 1px solid #ccc;
+        input,
+        select {
+            padding: 0.4rem;
+        }
+    }
+    th:last-child,
+    td:last-child {
+        border-right: none;
+    }
+    thead {
+        background-color: #ccc;
+    }
+    .no-record {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: "768px") {
+    .task-form {
+        width: 100%;
+        .MuiGrid-item {
+            width: 100%;
+        }
+        form{
+            border: 1px solid #ccc;
+            padding: 1.2rem;
+        }
+    }
+}
